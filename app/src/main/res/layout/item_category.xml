@@ -15,7 +15,7 @@
     app:strokeWidth="2dp">
 
     <TextView
-        android:id="@+id/tv_genre"
+        android:id="@+id/tv_category"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
