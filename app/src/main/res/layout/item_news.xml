@@ -13,7 +13,8 @@
         android:layout_marginRight="11dp"
         android:layout_marginBottom="7dp"
         app:cardCornerRadius="10dp"
-        app:cardElevation="@dimen/cardview_default_elevation">
+        app:cardElevation="@dimen/cardview_default_elevation"
+        app:cardUseCompatPadding="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,7 +27,8 @@
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
                 android:transitionName="img"
-                tools:ignore="UnusedAttribute" />
+                tools:ignore="UnusedAttribute"
+                tools:src="@tools:sample/avatars" />
 
             <ImageView
                 android:id="@+id/shadow_bottom"
@@ -54,6 +56,7 @@
                 android:layout_marginRight="160dp"
                 android:drawablePadding="10dp"
                 android:ellipsize="end"
+                android:fontFamily="@font/poppins_regular"
                 android:gravity="bottom"
                 android:maxLines="1"
                 android:singleLine="true"
@@ -72,6 +75,7 @@
                 android:padding="5dp">
 
                 <ImageView
+                    android:id="@+id/icDate"
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_marginLeft="5dp"
@@ -84,6 +88,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="27dp"
                     android:layout_marginRight="10dp"
+                    android:fontFamily="@font/poppins_regular"
                     android:text="01 January 1990"
                     android:textColor="#606060" />
 
@@ -97,7 +102,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="16dp"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Title"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -110,6 +115,9 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="16dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_regular"
+                android:maxLines="3"
                 android:text="Desc" />
 
             <TextView
@@ -122,7 +130,7 @@
                 android:layout_marginBottom="10dp"
                 android:drawablePadding="10dp"
                 android:ellipsize="end"
-                android:fontFamily="sans-serif-light"
+                android:fontFamily="@font/poppins_regular"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:text="Source"
@@ -139,6 +147,7 @@
                 android:layout_toRightOf="@id/source"
                 android:drawablePadding="10dp"
                 android:ellipsize="end"
+                android:fontFamily="@font/poppins_regular"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:text="Time" />

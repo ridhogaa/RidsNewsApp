@@ -9,6 +9,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.ergea.ridsnewsapp.common.proceedWhen
 import com.ergea.ridsnewsapp.databinding.FragmentHomeBinding
@@ -24,7 +25,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
     private val categoryAdapter: CategoryAdapter by lazy {
         CategoryAdapter { data ->
-
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSourceFragment(data))
         }
     }
 
@@ -39,6 +40,9 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         fetchData()
         setRecyclerViewCategory()
+        binding.btnSearch.setOnClickListener {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToSearchFragment())
+        }
     }
 
     private fun fetchData() = with(viewModel) {

@@ -22,7 +22,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "BASE_URL", "\"https://newsapi.org/v2/\"")
-        buildConfigField("String", "API_KEY", "\"c99190a1be7e42919aa7f02448804155\"")
+        buildConfigField("String", "API_KEY", "\"f3c19e035bdd4bbe8b58e45dde3d7228\"")
     }
 
     buildTypes {
@@ -97,4 +97,7 @@ dependencies {
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2")
+
+    //Times Formater
+    implementation("org.ocpsoft.prettytime:prettytime:4.0.1.Final")
 }
